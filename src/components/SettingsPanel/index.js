@@ -294,7 +294,7 @@ const SettingsPanel = () => {
   return (
     <SettingsContainer>
       <ContentContainer>
-        <Header>
+        <Header className="d-none d-lg-flex">
           <HeaderLeft>
             <Title>Notification Permissions</Title>
           </HeaderLeft>

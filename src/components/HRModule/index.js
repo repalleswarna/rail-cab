@@ -523,7 +523,7 @@ const HRModule = () => {
         </SidebarItem>
       </Sidebar>
 
-      <HeaderContainer sidebarOpen={sidebarOpen}>
+      <HeaderContainer sidebarOpen={sidebarOpen} className="d-none d-lg-flex">
         <Header>
           {activeTab !== "dashboard" && (
             <FaArrowLeft

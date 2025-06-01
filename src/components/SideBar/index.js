@@ -25,6 +25,41 @@ import SupportPortal from "../SupportPortal";
 import ContentManagement from "../ContentManagement";
 import Profile from "../Profile";
 
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  @media (max-width: 1024px) {
+    left: 0;
+    width: 100%;
+  }
+`;
+
+const HeaderRight = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
+const BellIconWrapper = styled.div`
+  position: relative;
+  font-size: 24px;
+  color: #64748b;
+  cursor: pointer;
+  &:hover {
+    color: #0f172a;
+  }
+`;
+
 const SideBar = () => {
   const [activeTab, setActiveTab] = useState("Dashboard");
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -120,13 +155,30 @@ const SideBar = () => {
   return (
     <AppWrapper>
       {/* Mobile Header */}
+
+      
       <MobileHeader className="d-lg-none">
         <button onClick={toggleSidebar}>
           {sidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
-        <HeaderTitle>{activeTab}</HeaderTitle>
+        <HeaderTitle >{activeTab}</HeaderTitle>
         <div style={{ width: "24px" }}></div> {/* Spacer for alignment */}
+        <HeaderRight>
+          <BellIconWrapper>
+            <FaBell />
+          </BellIconWrapper>
+          <span style={{ color: "#0f172a", fontWeight: 500 }}>
+              John Smith
+            </span>
+          <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="John Smith"
+              style={{ width: "32px", height: "32px", borderRadius: "50%" }}
+            />
+            
+        </HeaderRight>
       </MobileHeader>
+
 
       {/* Sidebar for large screens */}
       <FixedSidebar
@@ -225,8 +277,8 @@ const MobileHeader = styled.div`
 
 const HeaderTitle = styled.h5`
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #007bff;
 `;
 

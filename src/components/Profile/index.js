@@ -179,7 +179,7 @@ const Profile = () => {
 
   return (
     <Container>
-      <Header>
+      <Header className="d-none d-lg-flex">
         <Title>My Profile</Title>
         <UserArea>
           <BellIcon size={20} />

@@ -193,7 +193,7 @@ function Dashboard() {
   return (
     <>
       {/* Header */}
-      <Header>
+      <Header className="d-none d-lg-flex">
         <h4>Dashboard</h4>
         <HeaderRight>
           <BellIconWrapper>

@@ -267,7 +267,7 @@ const ContentManagement = () => {
   return (
     <PageContainer>
       {/* Header */}
-      <Header>
+      <Header className="d-none d-lg-flex">
         <HeaderTitle>Content Management</HeaderTitle>
         <UserArea>
           <IoIosNotifications size={20} />
