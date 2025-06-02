@@ -832,7 +832,7 @@ function SupportPortal() {
 
   return (
     <>
-      <FixedHeader>
+      <FixedHeader className="d-none d-lg-flex">
         <h4 className="header-title">
           {activeTab === "supportPortal" && "Support Portal"}
           {activeTab === "liveChats" && (

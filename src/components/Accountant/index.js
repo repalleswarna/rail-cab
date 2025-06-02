@@ -417,7 +417,7 @@ const Accountant = () => {
 
   return (
     <>
-      <FixedHeader>
+      <FixedHeader className="d-none d-lg-flex">
         <Container fluid>
           <Row className="align-items-center justify-content-between">
             <Col xs={12} md="auto" className="d-flex align-items-center">

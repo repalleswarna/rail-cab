@@ -203,7 +203,7 @@ function NotificationPanel() {
 
   return (
     <Container className="container-fluid">
-      <FixedHeaderWrapper>
+      <FixedHeaderWrapper className="d-none d-lg-flex">
         <h5 style={{ fontWeight: "600", color: "black", fontSize: "22px" }}>
           Notification Integrations
         </h5>

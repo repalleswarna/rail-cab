@@ -255,7 +255,8 @@ const ServiceManager = () => {
 
   return (
     <AppWrapper>
-      <Header blur={showAddModal}>
+      
+<Header blur={showAddModal} className="d-none d-lg-flex">
         <button className="btn d-lg-none me-2" onClick={toggleSidebar}>
           {sidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
@@ -274,7 +275,6 @@ const ServiceManager = () => {
           </ProfileDetails>
         </ProfileWrapper>
       </Header>
-
       {showAddModal && <BlurOverlay />}
       {showAddModal && <NavBlurOverlay />}
 
